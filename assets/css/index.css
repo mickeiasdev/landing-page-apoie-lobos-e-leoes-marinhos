@@ -1,0 +1,178 @@
+* {
+    /* calcula o tamanho do conteudo + borda + padding, usar p/ evitar bugs */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Oxygen", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+:root {
+    --color-background: #030207;
+    --color-white: #f8ffff;
+    --color-blue: #1474b4;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-white);
+}
+
+a {
+    color: var(--color-blue);
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), var(--color-background));
+    /* assistir aula gratuita da onebitcode sobre position! */
+    position: relative;
+    height: 100vh;
+}
+
+.hero__background {
+    /* define a forma que um objeto vai se encaixar na tela */
+    object-fit: cover;
+    position: absolute;
+    /* usa para posicionar manualmente um elemento */
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+}
+
+.hero__foreground {
+    color: var(--color-white);
+    text-align: center;
+    padding: 40vh;
+}
+
+.hero__title {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+.hero__text {
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.section {
+    overflow: hidden;
+    padding: 0 8rem;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 4rem auto;
+}
+
+.section__img,
+.section__img-inline {
+    border-radius: 0.75rem;
+    /* eixo x(horizontal), eixo y(vertical), blur(borrado)"opc", recuo/expansao"opc" e cor */
+    box-shadow: 0 1rem 2rem -0.5rem rgba(4, 57, 98, 0.25);
+    /* fica 100% do tamanho do pai, section */
+    width: 100%;
+    object-fit: cover;
+    /* a img se iniciara a partir do topo */
+    object-position: top;
+    position: relative;
+    max-height: 30rem;
+    width: 100%;
+}
+
+.section__text,
+.section__text-inline {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 4rem auto;
+}
+
+.section__img-inline {
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    float: left;
+    height: 25rem;
+    width: 20rem;
+}
+
+.section__text-inline {
+    text-align: left;
+    padding-right: 4rem;
+    margin-top: 7.5rem;
+}
+
+.cool-facts-img {
+    float: right;
+}
+
+.cool-facts > .section__text-inline {
+    overflow: hidden;
+    text-align: right;
+    margin-right: 2rem;
+    margin-top: 7.5rem;
+}
+
+.section__text-inline > p {
+    margin-top: 1.5rem;
+}
+
+#hangouts img {
+    object-position: center;
+}
+
+.gallery__img {
+    position: relative;
+    border-radius: 0.75rem;
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    transform: rotate(-2deg); /* deg = graus */
+}
+
+.gallery__img-wrapper + .gallery__img-wrapper {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery__img-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.gallery__img-wrapper:nth-child(even) > .gallery__img {
+    top: 1rem;
+    transform: rotate(2deg);
+}
+
+.gallery__img-wrapper::after {
+    content: "";
+    background-color: rgb(59, 70, 190);
+    border: solid 1px #001450;
+    border-radius: 999px;
+    display: block;
+    height: 1.25rem;
+    width: 1.25rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 1rem;
+}
+
+.gallery__img-wrapper:nth-child(even)::after {
+    top: 1.3rem;
+    left: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--color-background);
+    margin-top: 5rem;
+    padding: 2.5rem;
+}
