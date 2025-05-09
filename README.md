@@ -39,4 +39,8 @@ Este projeto consiste em uma landing page focada em arrecadação e conscientiza
 
 ## 👨‍💻 Autor
 
-**Mickeias Coelho.** Este conteúdo faz parte de um estudo independente realizado por mim.
+Desenvolvido por [Mickeias Coelho](https://github.com/mickeiasdev)
+
+Sinta-se à vontade para fazer contribuições ou melhorar o código.
+
+📌 **Observação:** Este projeto foi desenvolvido como parte de um estudo pessoal com o objetivo de praticar e aprofundar conhecimentos na área.
